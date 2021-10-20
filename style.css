@@ -1,7 +1,7 @@
 
     /* Cascating Stylesheet*/
     h1, {
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       color: aliceblue;
     }
     p{
@@ -17,7 +17,20 @@
       display: grid;
       place-items: center;
 
-      background-image: url(./NLWHEAT\ -\ 1920x1080.png);
+    }
+    .container{
+      max-width: 250px;
+      margin: ;
+    }
+
+    .perfil{
+      width: 150px;
+      
+    }
+    main{
+      background: url(./NLWHEAT\ -\ 1920x1080.png);
+      width: 375px;
+      height: 812px;
     }
 
     a {
