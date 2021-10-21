@@ -23,61 +23,95 @@ https://programareceitasparasecar.com/treinamento-modulo1
 <html>
   <!--Head são configurações da pagina-->
 
-  <head>
-    <title>Mauricio - DoWhile 2021</title>
+  <html>
+    <head>
+      <title>Mauricio Junior - DoWhile 2021</title>
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+      <link rel="stylesheet" href="style.css" />
 
-  <body>
-    <main>
-      <div class="container">
-        <div class="avatar">
-          <img src="images/build.svg" alt="selo" />
-          <img class="perfil" src="images/perfil2.jpeg" alt="Foto Pessoal" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+      <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body>
+      <main>
+        <div class="container">
+          <div class="avatar">
+            <span>
+              <img src="images/build.svg" alt="Selo Rocketseat" />
+            </span>
+            <img
+              src="https://lorempixel.com/185/185/people/"
+              alt="Foto pessoal"
+            />
+          </div>
+
+          <h1 id="userName">Mauricio Junior</h1>
+          <a href="https://github.com/maykbrito" target="_blank">
+            <img src="images/github.svg" alt="ícone github" />
+            maykbrito</a
+          >
+
+          <p>
+            An instructor focused on helping pople start programming for web
+          </p>
+
+          <ul id="socialLinks">
+            <li class="youtube">
+              <a href="https://youtube.com/maykbrito" target="_blank">
+                <img src="images/youtube.svg" alt="ícone youtube" />
+              </a>
+            </li>
+            <li class="facebook">
+              <a href="https://facebook.com/maykbrito" target="_blank">
+                <img src="images/facebook.svg" alt="ícone facebook" />
+              </a>
+            </li>
+            <li class="instagram">
+              <a href="https://instagram.com/maykbrito" target="_blank">
+                <img src="images/instagram.svg" alt="ícone instagram" />
+              </a>
+            </li>
+            <li class="twitter">
+              <a href="https://twitter.com/maykbrito" target="_blank">
+                <img src="images/twitter.svg" alt="ícone twitter" />
+              </a>
+            </li>
+          </ul>
         </div>
+      </main>
 
-        <h1>Mauricio Santos</h1>
-        <a href="https://instagram.com/maufsjr">mauriciogen3</a>
-        <img src="images/github.svg" alt="ícone" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. In repellat
-          unde natus dignissimos consectetur dolor quidem eveniet officiis velit
-          aliquid debitis tempore, magnam, sunt omnis blanditiis qui libero
-          nostrum! Voluptate?
-        </p>
+      <script>
+        const LinksSocialMedia = {
+          github: 'jakeliny',
+          youtube: 'jakelinygracielly',
+          facebook: 'maykbrito',
+          instagram: 'jakeliny.gracielly',
+          twitter: 'jakelinytec'
+        }
 
-        <ul>
-          <li>
-            <a href="http://youtube.com">
-              <img
-                target="_blank"
-                src="images/youtube.svg"
-                alt="ícone Youtue"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="http://facebook.com">
-              <img
-                src="images/facebook.svg"
-                alt="ícone facebook"
-                target="_blank"
-              />
-            </a>
-          </li>
+        function changeSocialMediaLinks() {
+          for (let li of socialLinks.children) {
+            const social = li.getAttribute('class')
 
-          <li>
-            <a href=" http://instagram.com/">
-              <img
-                target="_blank"
-                src="images/instagram.svg"
-                alt="ícone instagram"
-              />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </main>
-  </body>
+            li.children[0].href = `https://${social}.com/${LinksSocialMedia[social]}`
+
+            alert(li.children[0].href)
+          }
+        }
+
+        // i = i + 1
+        // i++
+
+        // ser humano 12345678910
+        //computador 0123456789
+
+        changeSocialMediaLinks()
+      </script>
+    </body>
+  </html>
 </html>
