@@ -15,7 +15,7 @@ const linksSocialMedia = {
 // function changeSocialMediaLinks() {
 //MODELO ANTIGO DE PEGAR ALGUMA INFORMAÇÃO PELO ID
 
-document.getElementById('userName').textContent = 'Mauricio Junior'
+//document.getElementById('userName').textContent = 'Mauricio Junior'
 
 //MODELO NOVO DE PEGAR UMA INFORMACAO E SUBSTITUIR NA PAGINA
 // userName.textContent = 'Mauricio junior'
@@ -36,6 +36,12 @@ function getGitHubProfileInfos() {
 
   fetch(url)
     .then(response => response.json())
-    .then(data => alert(data.bio))
+    .then(data => {
+      userName.textContent = data.name
+      userBio.textContent = data.bio
+      userLink.href = data.html_url
+      userImage.src = data.avatar_url
+      UserLogin.textContent = data.login
+    })
 }
 getGitHubProfileInfos()
