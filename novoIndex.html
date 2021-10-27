@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+  <header>
+    <title>Mauricio Crachá</title>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      rel="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="stylesheet"
+    />
+  </header>
+  <body>
+    <main>
+      <div class="container">
+        <div class="avatar">
+          <span>
+            <img src="/images/build.svg" alt="Selo" />
+          </span>
+          <img src="/images/perfil2.jpeg" alt="Perfil" />
+        </div>
+
+        <h1 id="userName">Mayk</h1>
+        <a href="http://github.com/maykbrito" target="_blank">
+          <img src="images/github.svg" alt="icone github" /> mauriciogen3
+        </a>
+
+        <p>Aspirante a programador</p>
+
+        <ul id="socialLinks">
+          <li class="youtube">
+            <a href="http://youtube.com/maykbrito" target="_blank">
+              <img src="images/youtube.svg" alt="icone youtube"
+            /></a>
+          </li>
+
+          <li class="facebook">
+            <a href="http://facebook.com/maykbrito" target="_blank">
+              <img src="images/facebook.svg" alt="icone facebook"
+            /></a>
+          </li>
+
+          <li class="instagram">
+            <a href="http://instagram.com/maykbrito" target="_blank">
+              <img src="images/instagram.svg" alt="icone instagram"
+            /></a>
+          </li>
+
+          <li class="twitter">
+            <a href="http://twitter.com/maykbrito" target="_blank">
+              <img src="images/twitter.svg" alt="icone twitter"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <script>
+      const linksSocialMedia = {
+        github: 'mauriciogen3',
+        youtube: 'junior8m',
+        facebook: 'mauriciogen3',
+        instagram: 'maufsjr',
+        twitter: 'junior8m'
+      }
+
+      document.getElementById('userName').textContent = 'Mauricio Junior'
+
+      function changeSocialMediaLinks() {
+        for (let li of socialLinks.children) {
+          const social = li.getAttribute('class')
+
+          li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+        }
+      }
+
+      changeSocialMediaLinks()
+    </script>
+  </body>
+
+  <footer></footer>
+</html>
